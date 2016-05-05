@@ -1,0 +1,7 @@
+name             'imawebui-rpm'
+maintainer       'YOUR_NAME'
+maintainer_email 'YOUR_EMAIL'
+license          'All rights reserved'
+description      'Installs/Configures imawebui-rpm'
+long_description 'Installs/Configures imawebui-rpm'
+version          '0.1.0'

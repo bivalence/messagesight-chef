@@ -1,0 +1,7 @@
+name             'imaserver'
+maintainer       'YOUR_NAME'
+maintainer_email 'YOUR_EMAIL'
+license          'All rights reserved'
+description      'Installs/Configures imaserver administration library'
+long_description 'Installs/Configures imaserver administration library'
+version          '0.1.0'
