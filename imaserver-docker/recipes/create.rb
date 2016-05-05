@@ -26,7 +26,7 @@ include_recipe "docker"
 svtperf_container=node.default["svtperf-docker"]["imaserver"]["name"]
 #build case/if of imaserver tiers (ie purples,green,etc) 
 #which may have different settings for docke env file
-template node.default["testhome"]+"/imaserver-docker.env" do
+template node.default["homedir"]+"/imaserver-docker.env" do
   source "imaserver-docker.env.erb"
   mode '0664'
   owner 'tester'
@@ -76,7 +76,7 @@ end
 
 docker_container svtperf_container do
     image node.default["svtperf-docker"]["imaserver"]["image"]["name"]
-    env_file node.default["testhome"]+"/imaserver-docker.env"
+    env_file node.default["homedir"]+"/imaserver-docker.env"
     net 'host'
     container_name svtperf_container
 

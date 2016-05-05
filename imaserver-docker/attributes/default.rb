@@ -11,28 +11,24 @@
 #*******************************************************************************
 
 
-#setup local vars
-top_directory="/mnt/seed/builds/release/CURREL/production"
-buildname="docker-svtperf"
-#build_ver="20151003-2347"
+#setup location of docker image to use
+image_location="/mnt/builds/imaserver-dockerimage.tar"
 
-#demo build1
-#build_ver="20151023-0418"
-#demo build2
-#build_ver="20151103-2311"
 
-build_ver="latest"
 
-default["testhome"]="/home/tester"
+#setup var where template msserver-docker.env.erb output will reside used in create.rb recipe
+default["homedir"]="/home/deploy"
 
+#setup vars according to environment
+#memory is set to 16G in byte format
 default["svtperf-docker"]["imaserver"]["memory"]=16384000000
-default["svtperf-docker"]["imaserver"]["name"]="SVTPERF-IMASERVER"
+default["svtperf-docker"]["imaserver"]["name"]="IMASERVER"
 default["svtperf-docker"]["imaserver"]["admin-port"]="9089"
 default["svtperf-docker"]["imaserver"]["diag"]="/mnt/messagesight/diag"
 default["svtperf-docker"]["imaserver"]["data"]="/mnt/messagesight/data"
 default["svtperf-docker"]["imaserver"]["store"]="/var/messagesight/store"
 default["svtperf-docker"]["imaserver"]["container_volume"]="/var/messagesight"
 
-default["svtperf-docker"]["imaserver"]["image"]["name"]="imaserver-svtperf"
-default["svtperf-docker"]["imaserver"]["image"]["file"]=top_directory+"/"+build_ver+"/"+buildname+"/imaserver-SVTPERF-DockerImage.tar"
+default["svtperf-docker"]["imaserver"]["image"]["name"]="imaserver"
+default["svtperf-docker"]["imaserver"]["image"]["file"]=image_location
 

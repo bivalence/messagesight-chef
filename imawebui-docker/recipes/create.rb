@@ -25,7 +25,7 @@ include_recipe "docker"
 
 #build case/if of imaserver tiers (ie purples,green,etc) 
 #which may have different settings for docke env file
-template node.default["testhome"]+"/imawebui-docker.env" do
+template node.default["homedir"]+"/imawebui-docker.env" do
   source "imawebui-docker.env.erb"
   mode '0664'
   owner 'tester'
@@ -50,7 +50,7 @@ end
 
 docker_container "svtperf-long-test" do
     image node.default["svtperf-docker"]["imawebui"]["image"]["name"]
-    env_file node.default["testhome"]+"/imawebui-docker.env"
+    env_file node.default["homedir"]+"/imawebui-docker.env"
     net 'host'
     container_name node.default["svtperf-docker"]["imawebui"]["name"]
     publish_exposed_ports true
