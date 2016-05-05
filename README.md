@@ -13,11 +13,20 @@ imaserver-docker
 
 Provides receipes that can be used to deploy docker MessageSight 2.0 containers
     
+imawebui-docker
+----
+
+Provides receipes that can be used to deploy docker MessageWebui 2.0 containers
+    
 imaserver-rpm
 ----
 Provides reciepes that can be used to deploy MessageSight 2.0 as a rpm install
 	
+imawebui-rpm
+----
+Provides reciepes that can be used to deploy MessageWebui 2.0 as a rpm install
+		
 demo
 ----
 
-Provides sample recipes which utilize the imaserver Chef HWRP library	
+Provides sample recipe which utilize the imaserver Chef HWRP library	
