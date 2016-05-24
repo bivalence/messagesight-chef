@@ -45,7 +45,7 @@ class Chef
         @password = 'admin'
 
         #server name used for 'Service' objects
-        @server_name = 'imaserver'
+        @server_name = 'Server'
 
         #accept license
         @licensed_usage=""
